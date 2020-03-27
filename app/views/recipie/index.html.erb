@@ -1,0 +1,43 @@
+<%= stylesheet_link_tag 'recipies', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 mt-5">
+         <% if flash[:alert] %>
+             <div class="alert alert-warning"><%= flash[:alert] %></div>
+        <% end %>
+      <div class="mx-auto mt-5" style="width: 400px">
+        <%= form_with(url: look_path, method: 'get', local: true, class: "search-form") do %>
+          <div class="form-group">
+            <%= label_tag :recipe, 'Type in ingredient to get recipies '%>
+            <%= text_field_tag :recipe, nil, placeholder: 'Eg. chicken', class: 'form-control search-input' %>
+          </div>
+          <%= button_tag 'Search', class: 'btn btn-success btn-block' %>
+        <% end %>
+        <div class="search-results">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row" style=" padding: 15px 0;">
+<% @recipe.each do |r| %>
+<div class ="col-lg-6">
+<div class="card" >
+<img src=<%= r["recipe"]["image"] %> class="card-img-top" alt="...">
+  <div class="card-body">
+    <h8 class ="title", style = "text-align: center;"><%= r["recipe"]["label"] %></h8>
+    <h8><%= r["recipe"]["dietLabels"] %></h8>
+    </br>
+    <% @ingredients = r["recipe"]["ingredients"] %>
+    <ul>
+    <% @ingredients.each do |ingredient| %>
+      <li><h8 class="card-title"><%= ingredient['text'] %><h8></h8></li>
+    <% end %>
+    </ul>
+    <h8 class ="title", style = "text-align: center;"> Calories -<%= r["recipe"]["calories"] %></h8>
+
+  </div>
+</div>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personal_trainer_id: 1
+  Name: MyString
+  PTName: MyString
+
+two:
+  personal_trainer_id: 1
+  Name: MyString
+  PTName: MyString

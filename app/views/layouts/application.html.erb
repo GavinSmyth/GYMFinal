@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GymFinal</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+ 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">GYM</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if signed_in? %>
+      <li class="nav-item active">
+      <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
+      
+      <li class="nav-item">
+      <%= link_to "Personal Trainers",  personal_trainers_path,class: "nav-link"  %>
+      </li>
+      <li class="nav-item">
+      <%= link_to "Classes", gym_class_finals_path, class: "nav-link"  %>
+      </li>
+      <% if current_user.admin == true %>
+      <li class="nav-item">
+      <%= link_to "Admin Dashboard", rails_admin.dashboard_path, class: "nav-link"  %>
+      </li>
+      <% end %>
+      <% end %>
+      
+    </ul>
+    <% if signed_in? %>
+    <ul class="navbar-nav">
+
+     <li class="nav-item">
+      <%= link_to current_user.email,  user_profiles_path, class: "nav-link"  %>
+     </li>
+
+     <li class="nav-item">
+       <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "nav-link", id:"signOut" %>
+     </li>
+
+      
+      <% else %>
+     <%= link_to "Login", new_user_session_path, id:"signIN" %>
+     </ul>
+    <% end %>
+  </div>
+</nav>
+  
+
+    </header>
+
+
+
+<section>
+<div id="flash">
+  <% flash.each do |key, value| %>
+    <div class="flash <%= key %>"><%= value %></div>
+  <% end %>
+</div>  
+    <%= yield %>
+ </section>   
+  </body>
+</html>
+

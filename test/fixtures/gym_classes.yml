@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Type: MyString
+  PTName: MyString
+  Date: 2020-02-24
+  Time:  13:47:57
+
+two:
+  Type: MyString
+  PTName: MyString
+  Date: 2020-02-24
+  Time: 13:47:57

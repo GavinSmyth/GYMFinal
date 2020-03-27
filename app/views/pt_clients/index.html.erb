@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pt Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Personal trainer</th>
+      <th>Name</th>
+      <th>Ptname</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pt_clients.each do |pt_client| %>
+      <tr>
+        <td><%= pt_client.personal_trainer_id %></td>
+        <td><%= pt_client.Name %></td>
+        <td><%= pt_client.PTName %></td>
+        <td><%= link_to 'Show', pt_client %></td>
+        <td><%= link_to 'Edit', edit_pt_client_path(pt_client) %></td>
+        <td><%= link_to 'Destroy', pt_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pt Client', new_pt_client_path %>

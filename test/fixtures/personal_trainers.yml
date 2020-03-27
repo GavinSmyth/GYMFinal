@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  firstName: MyString
+  secondName: MyString
+  desription: MyString
+  amountOfClients: 
+
+two:
+  firstName: MyString
+  secondName: MyString
+  desription: MyString
+  amountOfClients: 

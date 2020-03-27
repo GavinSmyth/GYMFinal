@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1 class = "title">Gym Classes</h1>
+<div class = "page-conatiner">
+
+
+<table class = "table">
+  <thead>
+  <%= stylesheet_link_tag 'gym_classes', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <tr>
+      <th>Personal trainer</th>
+      <th>Type</th>
+      <th>Ptname</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gym_class_finals.each do |gym_class_final| %>
+      <tr>
+        <td><%= gym_class_final.personal_trainer_id %></td>
+        <td><%= gym_class_final.Type %></td>
+        <td><%= gym_class_final.PTName %></td>
+        <td><%= gym_class_final.Date %></td>
+        <td><%= gym_class_final.Time %></td>
+        <td><%= link_to 'Show', gym_class_final %></td>
+        <td><%= link_to 'Edit', edit_gym_class_final_path(gym_class_final) %></td>
+        <td><%= link_to 'Destroy', gym_class_final, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<% if current_user.admin == true %>
+<%= link_to 'New Gym Class Final', new_gym_class_final_path %>
+<% end %>
+</div>
+
+

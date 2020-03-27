@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Firstname:</strong>
+  <%= @personal_trainer.firstName %>
+</p>
+
+<p>
+  <strong>Secondname:</strong>
+  <%= @personal_trainer.secondName %>
+</p>
+
+<p>
+  <strong>Desription:</strong>
+  <%= @personal_trainer.desription %>
+</p>
+
+<p>
+  <strong>Amountofclients:</strong>
+  <%= @personal_trainer.amountOfClients %>
+</p>
+
+<%= link_to 'Edit', edit_personal_trainer_path(@personal_trainer) %> |
+<%= link_to 'Back', personal_trainers_path %>

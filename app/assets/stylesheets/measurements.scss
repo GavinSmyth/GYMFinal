@@ -1,0 +1,47 @@
+// Place all the styles related to the measurements controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+#title2{
+    text-align: center;
+     margin: 20px 0 0 ;
+    padding: 10px 0;
+    }
+.table {
+    width:100%;
+
+}
+.table th{
+    text-align: left;
+}
+th, td{
+    font-size: 15px;
+}
+#second{
+    height: 50px;
+    position: relative;
+    color: #fff;
+    background-color: #212529;
+    border-style: groove;
+    border-color: #32383e;
+   
+    
+    
+}
+#weight{
+    text-align: center;
+    size: 15px;
+    padding: 15px 0;
+   
+    
+    
+}
+.container{
+    margin-top: 10px;
+}
+#input{
+    height: 300px;
+    background-color: #e9ecef;
+    border-style: groove;
+}

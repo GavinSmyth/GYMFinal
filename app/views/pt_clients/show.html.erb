@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personal trainer:</strong>
+  <%= @pt_client.personal_trainer_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pt_client.Name %>
+</p>
+
+<p>
+  <strong>Ptname:</strong>
+  <%= @pt_client.PTName %>
+</p>
+
+<%= link_to 'Edit', edit_pt_client_path(@pt_client) %> |
+<%= link_to 'Back', pt_clients_path %>

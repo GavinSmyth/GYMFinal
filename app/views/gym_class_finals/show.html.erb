@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Personal trainer:</strong>
+  <%= @gym_class_final.personal_trainer_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @gym_class_final.Type %>
+</p>
+
+<p>
+  <strong>Ptname:</strong>
+  <%= @gym_class_final.PTName %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @gym_class_final.Date %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @gym_class_final.Time %>
+</p>
+
+<%= link_to 'Edit', edit_gym_class_final_path(@gym_class_final) %> |
+<%= link_to 'Back', gym_class_finals_path %>

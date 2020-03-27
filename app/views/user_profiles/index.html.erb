@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1 class = "title">User Profile</h1>
+<center>
+<img src="https://i.stack.imgur.com/34AD2.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle"></a>
+</center>
+
+
+
+  
+  <%= stylesheet_link_tag 'user_profiles', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  <div class="container">
+  <div class="row">
+    <div class="col-lg-12">  
+
+  
+    <% @user_profiles.each do |user_profile| %>
+      
+      <strong>User: </strong><h8><%= user_profile.user_id %></h8>
+      <br>
+      <strong>Name: </strong><h8><%= user_profile.name %></h8>
+      <br>
+      <strong>Age: </strong><h8><%= user_profile.age %></h8>
+      <br>
+      <strong>Address: </strong><h8><%= user_profile.address %></h8>
+      <br>
+
+      <strong>Ptname: </strong><h8><%= user_profile.ptName %></h8>
+      <br>
+
+      <strong>Bio: </strong><h8><%= user_profile.bio %></h8>
+      <br>
+
+       
+        <td><%= link_to 'Edit', edit_user_profile_path(user_profile) %></td>
+        <td><%= link_to 'Destroy', user_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <br>
+        <%= link_to 'New User Profile', new_user_profile_path %>
+      
+    <% end %>
+  
+    </div>
+
+    </div>
+
+</div>
+
+<br>
+

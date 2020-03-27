@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  personal_trainer_id: 1
+  Type: MyString
+  PTName: 
+  Date: 2020-03-26
+  Time: 2020-03-26 22:01:47
+
+two:
+  personal_trainer_id: 1
+  Type: MyString
+  PTName: 
+  Date: 2020-03-26
+  Time: 2020-03-26 22:01:47

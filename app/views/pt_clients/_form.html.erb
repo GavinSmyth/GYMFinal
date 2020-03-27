@@ -1,0 +1,32 @@
+<%= form_with(model: pt_client, local: true) do |form| %>
+  <% if pt_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(pt_client.errors.count, "error") %> prohibited this pt_client from being saved:</h2>
+
+      <ul>
+        <% pt_client.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :personal_trainer_id %>
+    <%= form.number_field :personal_trainer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PTName %>
+    <%= form.text_field :PTName %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%= stylesheet_link_tag 'gym_classes', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+  </head>
+
+  <body>
+
+
+
+     <div id = "landingPage">
+      <div id = "first", style = "position:relative; top:80px; margin:auto;">
+       <h1 id = "title"> GYM</h1>
+       <p>To get started or to maintain with keeping track of your body click the button bellow!</p>
+       <a role="button", id = "button",  href="measurements#index">Measurements »</a>
+      </div>
+     </div>
+     <div class = "container">
+      <div class = "row">
+        <div class = "col-md-4">
+        <h2>About Us</h2>
+        <p>
+            To find out contact details, location for our facilities and more about the website click the button bellow.
+        </p>
+        <p>
+        <a class="btn btn-secondary" href="welcome/contact" role="button">View details »</a>
+        </p>
+        </div>
+        <div class = "col-md-4"> 
+        <h2>Meal Plans</h2>
+        <p>
+        To find out Daily meal plans of the calorie amount of your choosing click the button bellow.
+       </p>
+      <p>
+       <a class="btn btn-secondary" href="recipies#index" role="button">View details »</a>
+      </p>
+        </div>
+        <div class = "col-md-4"> 
+        <h2>Recipes</h2>
+        <p>
+        To find out some recipes you could make and the ingredients needed to make them click the button bellow.
+       </p>
+       <p>
+        <a class="btn btn-secondary" href="recipie/index" role="button">View details »</a>
+        </p>
+        </div>
+      </div>
+    </div>
+    <%= render partial: "partial" %>
+    
+    
+  </body>
+</html> 

@@ -1,0 +1,42 @@
+<%= form_with(model: gym_class_final, local: true) do |form| %>
+  <% if gym_class_final.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(gym_class_final.errors.count, "error") %> prohibited this gym_class_final from being saved:</h2>
+
+      <ul>
+        <% gym_class_final.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :personal_trainer_id %>
+    <%= form.number_field :personal_trainer_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :PTName %>
+    <%= form.text_field :PTName %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Date %>
+    <%= form.date_select :Date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Time %>
+    <%= form.time_select :Time %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

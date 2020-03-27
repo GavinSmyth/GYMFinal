@@ -1,0 +1,42 @@
+<%= form_with(model: measurement, local: true) do |form| %>
+  <% if measurement.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(measurement.errors.count, "error") %> prohibited this measurement from being saved:</h2>
+
+      <ul>
+        <% measurement.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :week %>
+    <%= form.date_select :week %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weightKG %>
+    <%= form.number_field :weightKG %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weightStone %>
+    <%= form.number_field :weightStone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weightPounds %>
+    <%= form.number_field :weightPounds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :BodyFat %>
+    <%= form.number_field :BodyFat %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
