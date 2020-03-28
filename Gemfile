@@ -12,7 +12,7 @@ gem 'rails-observers'
 gem "sinatra"
 gem "pundit"
 gem 'pry', group: :development
-gem 'unit_converter'
+gem 'converter'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
 # Use sqlite3 as the database for Active Record

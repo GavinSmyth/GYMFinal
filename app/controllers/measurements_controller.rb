@@ -1,13 +1,13 @@
 
-require 'unit_converter'
+require 'converter'
 class MeasurementsController < ApplicationController
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  def unit_converter
+  def converter
     @input1 = params[:value]
     @input2 = params[:unit]
-    @result = UnitConverter::Weight.instance.conversions(@input1.to_i , @input2.to_sym)
+    @result = Converter::Weight.instance.conversions(@input1.to_i , @input2.to_sym)
     @measurements = Measurement.where(:user_id => current_user.id)
     cookies[:email] = current_user.email
     @email = cookies[:email]

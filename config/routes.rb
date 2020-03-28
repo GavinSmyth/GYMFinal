@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get "index", to:"measurements#index"
   root 'welcome#show'
   get '/validate', :controller=>'measurements', :action=>'index'
-  post '/validate', :controller=>'measurements', :action=>'unit_converter'
+  post '/validate', :controller=>'measurements', :action=>'converter'
 
   get '/search' => 'recipies#index'
   get '/look' => 'recipie#index'
