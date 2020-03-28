@@ -1,5 +1,5 @@
 require 'singleton'
-module Converter
+module UnitConverter
 
     class ConversionError < StandardError
     end

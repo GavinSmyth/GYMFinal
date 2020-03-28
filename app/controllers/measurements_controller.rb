@@ -7,7 +7,7 @@ class MeasurementsController < ApplicationController
   def converter
     @input1 = params[:value]
     @input2 = params[:unit]
-    @result = Converter::Weight.instance.conversions(@input1.to_i , @input2.to_sym)
+    @result = UnitConverter::Weight.instance.conversions(@input1.to_i , @input2.to_sym)
     @measurements = Measurement.where(:user_id => current_user.id)
     cookies[:email] = current_user.email
     @email = cookies[:email]
