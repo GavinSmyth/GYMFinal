@@ -1,5 +1,5 @@
 require 'singleton'
-
+module Converter
 
     class ConversionError < StandardError
     end
@@ -20,7 +20,7 @@ require 'singleton'
         pounds: 14  
       }
     }
-    weight = UnitConverter.instance    
+    weight = UnitConverter.instance
   
     def convert(value, from, to:)
       raise ConversionError, "Value is not numeric" unless value.is_a? Numeric
@@ -43,4 +43,4 @@ require 'singleton'
       end
     end
   end
-
+  end
