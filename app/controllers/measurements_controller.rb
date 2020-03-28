@@ -1,5 +1,4 @@
 
-require 'unit_converter'
 class MeasurementsController < ApplicationController
   before_action :set_measurement, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
