@@ -1,9 +1,9 @@
 require 'singleton'
-module UnitConverter
+
 
     class ConversionError < StandardError
     end
-    class Weight
+    class UnitConverter
       include Singleton
     # lookup table
     CONVERSIONS = {
@@ -20,7 +20,7 @@ module UnitConverter
         pounds: 14  
       }
     }
-    weight = Weight.instance
+    weight = UnitConverter.instance    
   
     def convert(value, from, to:)
       raise ConversionError, "Value is not numeric" unless value.is_a? Numeric
@@ -43,4 +43,4 @@ module UnitConverter
       end
     end
   end
-  end
+
