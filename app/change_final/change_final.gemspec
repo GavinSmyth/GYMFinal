@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name = 'change_final'
-    s.version = '0.0.1'
+    s.version = '0.0.2'
     s.date = '2020-02-02'
     s.summary = "change  weight!"
     s.description = "A simple gem"

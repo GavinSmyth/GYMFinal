@@ -20,7 +20,6 @@ module ChangeFinal
         pounds: 14  
       }
     }
-    weight = Different.instance
   
     def convert(value, from, to:)
       raise ConversionError, "Value is not numeric" unless value.is_a? Numeric
