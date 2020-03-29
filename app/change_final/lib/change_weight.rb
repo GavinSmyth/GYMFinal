@@ -3,7 +3,7 @@ module ChangeFinal
 
     class ConversionError < StandardError
     end
-    class Different
+    class ChangeWeight
       include Singleton
     # lookup table
     CONVERSIONS = {
