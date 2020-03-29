@@ -1,5 +1,5 @@
 require 'singleton'
-module ChangeFinal
+module Lib
 
     class ConversionError < StandardError
     end
