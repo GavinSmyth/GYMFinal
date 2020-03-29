@@ -32,12 +32,17 @@ class PersonalTrainersController < ApplicationController
   def create
     @personal_trainer = PersonalTrainer.new(personal_trainer_params)
     authorize @personal_trainer
-    if @personal_trainer.save
-      render json: @personal_trainer.new_record?
-    else
-      render json: @personal_trainer.errors, status: :unpocessably_entity
-    end
+   
 
+    respond_to do |format|
+      if @personal_trainer.save
+        format.html { redirect_to @personal_trainer, notice: 'Personal trainer was successfully created.' }
+        format.json { render :show, status: :created, location: @personal_trainer }
+      else
+        format.html { render :new }
+        format.json { render json: @personal_trainer.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
   # PATCH/PUT /personal_trainers/1
