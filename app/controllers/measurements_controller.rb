@@ -10,6 +10,8 @@ class MeasurementsController < ApplicationController
     @measurements = Measurement.where(:user_id => current_user.id)
     cookies[:email] = current_user.email
     @email = cookies[:email]
+    cookies[:time] = Time.now
+    @time = cookies[:time]
     render :index
     end
     
@@ -25,6 +27,8 @@ class MeasurementsController < ApplicationController
     @measurements = Measurement.where(:user_id => current_user.id)
     cookies[:email] = current_user.email
     @email = cookies[:email]
+    cookies[:time] = Time.now
+    @time = cookies[:time]
     
 
 

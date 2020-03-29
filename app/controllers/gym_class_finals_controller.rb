@@ -19,7 +19,6 @@ class GymClassFinalsController < ApplicationController
   # GET /gym_class_finals/new
   def new
     @gym_class_final = GymClassFinal.new
-    add_observer(GymClass.new)
 
   end
 
