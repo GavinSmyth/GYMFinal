@@ -262,7 +262,6 @@ GEM
       thread_safe (~> 0.1)
     tzinfo-data (1.2019.3)
       tzinfo (>= 1.0.0)
-    unit_converter (0.0.0)
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (4.0.1)
@@ -313,7 +312,6 @@ DEPENDENCIES
   sqlite3
   turbolinks (~> 5)
   tzinfo-data
-  unit_converter
   web-console (>= 3.3.0)
   webdrivers
   webpacker (~> 4.0)
