@@ -32,7 +32,7 @@ class PersonalTrainersController < ApplicationController
   def create
     @personal_trainer = PersonalTrainer.new(personal_trainer_params)
     authorize @personal_trainer
-    if @personal_trainer.persisted
+    if @personal_trainer.persisted?
       render json: @personal_trainer.record
     else
       render json: @personal_trainer.errors, status: :unpocessably_entity
