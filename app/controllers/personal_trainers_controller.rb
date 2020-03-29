@@ -33,7 +33,7 @@ class PersonalTrainersController < ApplicationController
     @personal_trainer = PersonalTrainer.new(personal_trainer_params)
     authorize @personal_trainer
     if @personal_trainer.save
-      render json: @personal_trainer.record
+      render json: @personal_trainer.new_record?
     else
       render json: @personal_trainer.errors, status: :unpocessably_entity
     end
